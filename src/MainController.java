@@ -1,5 +1,8 @@
 // import javafx.event.ActionEvent;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 import javax.swing.JOptionPane;
 
 import javafx.event.ActionEvent;
@@ -18,6 +21,13 @@ public class MainController {
     private double xOffset = 0;
     private double yOffset = 0;
 
+    // infos users
+    private String numero;
+    private double solde;
+
+    @FXML
+    private Label welcomLayout;
+
     @FXML
     private AnchorPane root;
     
@@ -32,6 +42,15 @@ public class MainController {
     public void reduce(){
         Stage stage = (Stage) root.getScene().getWindow();
         stage.setIconified(true);
+    }
+
+    // recupere les valeurs
+    public void init(String num, double amount){
+        this.numero = num;
+        this.solde = amount;
+
+        welcomLayout.setText("Bienvenu, " + this.numero);
+        this.amount.setText("********");
     }
 
     // change scene to retrait scene
@@ -96,7 +115,9 @@ public class MainController {
             amount.setText("********");
         }
         else{
-            amount.setText("190 000");
+            // affichage formatee 100000 -> 100 000
+            NumberFormat numberFormat = NumberFormat.getInstance(Locale.FRANCE);
+            amount.setText(numberFormat.format(solde));
         }
     }
 }
