@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?> -->
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+   <children>
+      <AnchorPane fx:id="displayLayout" layoutX="35.0" layoutY="124.0" prefHeight="258.0" prefWidth="530.0" style="-fx-border-radius: 20;" stylesheets="@main.css">
+         <children>
+            <Label fx:id="amount" alignment="CENTER" layoutX="2.0" layoutY="50.0" prefHeight="79.0" prefWidth="530.0" text="170 000" />
+            <Label fx:id="unit" layoutX="201.0" layoutY="136.0" text="CFAF" />
+            <Button fx:id="displayHide" layoutX="458.0" layoutY="200.0" mnemonicParsing="false" onAction="#hideDisplay" style="-fx-cursor: pointer;">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="EYE" size="2em">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </AnchorPane>
+      <Label fx:id="welcomLayout" layoutX="35.0" layoutY="77.0" prefHeight="29.0" prefWidth="530.0" stylesheets="@main.css" text="Bienvenue, 229 330 473" />
+      <Label fx:id="question" alignment="CENTER" layoutX="63.0" layoutY="454.0" prefHeight="39.0" prefWidth="490.0" text="Vos activites" />
+      <Button fx:id="retrait" layoutX="63.0" layoutY="550.0" mnemonicParsing="false" onAction="#faireRetrait" prefHeight="91.0" prefWidth="213.0" style="-fx-border-radius: 16;" text="Retrait">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="MONEY" size="1.2em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="infos" layoutX="338.0" layoutY="550.0" mnemonicParsing="false" onAction="#consulterHistorique" prefHeight="91.0" prefWidth="213.0" style="-fx-border-radius: 16;" text="Mes infos">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="INFO_CIRCLE" size="1.2em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="history" layoutX="63.0" layoutY="681.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="213.0" style="-fx-border-radius: 16;" text="Historiques">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="HISTORY" size="1.2em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="reduce" layoutX="493.0" layoutY="7.0" mnemonicParsing="false" onAction="#reduce">
+         <graphic>
+            <FontAwesomeIcon fill="RED" glyphName="MINUS" selectionFill="RED" size="1.3em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="close" layoutX="545.0" layoutY="7.0" mnemonicParsing="false" onAction="#close">
+         <graphic>
+            <FontAwesomeIcon fill="RED" glyphName="CLOSE" size="1.3em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="35.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@res/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="74.0" layoutY="14.0" text="ATM" textFill="RED">
+         <font>
+            <Font name="Montserrat Regular" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

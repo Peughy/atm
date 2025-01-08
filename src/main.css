@@ -1,0 +1,93 @@
+
+#root{
+    -fx-background-color: rgb(39, 38, 38);
+}
+
+#displayLayout{
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 16px;
+}
+
+#welcomLayout{
+    -fx-font-family: Montserrat;
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+}
+
+#amount{
+    -fx-font-family: Montserrat;
+    -fx-font-size: 64px;
+    -fx-font-weight: bold;
+    -fx-text-fill: red;
+}
+
+#unit{
+    -fx-font-family: Montserrat;
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+#displayHide, #close, #reduce{
+    -fx-background-color: transparent;
+    -fx-padding: 8px 12px;
+    -fx-text-fill: white;
+    -fx-font-family: Montserrat;
+    -fx-font-size: 18;
+    -fx-background-radius: 16px;
+}
+
+#displayHide:hover{
+    -fx-background-color: rgb(39, 38, 38);
+    -fx-cursor: hand;
+}
+
+#close:hover{
+    -fx-background-color: rgb(39, 38, 38);
+    -fx-cursor: hand;
+}
+
+#reduce:hover{
+    -fx-background-color: rgb(39, 38, 38);
+    -fx-cursor: hand;
+}
+
+#question{
+    -fx-background-color: transparent;
+    -fx-font-family: Montserrat;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-wrap-text: text-wrap;
+}
+
+
+#retrait{
+    -fx-font-family: Montserrat;
+    -fx-background-color: red;
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-background-radius: 16px;
+}
+
+#infos{
+    -fx-font-family: Montserrat;
+    -fx-background-color: black;
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-background-radius: 16px;
+}
+
+#history{
+    -fx-font-family: Montserrat;
+    -fx-background-color: black;
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-background-radius: 16px;
+}
+
+#date{
+    -fx-text-fill: white;
+    -fx-font-family: Montserrat;
+    -fx-font-size: 18px;
+}

@@ -1,0 +1,26 @@
+{
+	"java.project.sourcePaths": [
+		"src"
+	],
+	"java.project.outputPath": "bin",
+	"java.project.referencedLibraries": [
+		"lib/**/*.jar",
+		"d:/DEKSTOP APP'S/lib/javafx.base.jar",
+		"d:/DEKSTOP APP'S/lib/javafx.controls.jar",
+		"d:/DEKSTOP APP'S/lib/javafx.fxml.jar",
+		"d:/DEKSTOP APP'S/lib/javafx.graphics.jar",
+		"d:/DEKSTOP APP'S/lib/javafx.media.jar",
+		"d:/DEKSTOP APP'S/lib/javafx.swing.jar",
+		"d:/DEKSTOP APP'S/lib/javafx.web.jar",
+		"d:/DEKSTOP APP'S/lib/javafx-swt.ja",
+		"c:\\Program Files\\Java\\javafx\\lib\\javafx.base.jar",
+		"c:\\Program Files\\Java\\javafx\\lib\\javafx.controls.jar",
+		"c:\\Program Files\\Java\\javafx\\lib\\javafx.fxml.jar",
+		"c:\\Program Files\\Java\\javafx\\lib\\javafx.graphics.jar",
+		"c:\\Program Files\\Java\\javafx\\lib\\javafx.media.jar",
+		"c:\\Program Files\\Java\\javafx\\lib\\javafx.swing.jar",
+		"c:\\Program Files\\Java\\javafx\\lib\\javafx.web.jar",
+		"c:\\Program Files\\Java\\javafx\\lib\\javafx-swt.jar",
+		"src/fontawesomefx-8.2.jar"
+	]
+}

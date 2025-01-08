@@ -1,0 +1,20 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+
+		{
+			"vmArgs": "--module-path \"d:/DEKSTOP APP'S/lib\" --add-modules javafx.controls,javafx.fxml",
+			"type": "java",
+			"name": "Launch Current File",
+			"request": "launch",
+			"mainClass": "${file}"
+		},
+		{
+			"vmArgs": "--module-path \"C:/Program Files/Java/javafx/lib\" --add-modules javafx.controls,javafx.fxml",
+			"type": "java",
+			"name": "Launch App",
+			"request": "launch",
+			"mainClass": "App",
+		}
+	]
+}

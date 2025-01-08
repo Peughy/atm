@@ -1,0 +1,50 @@
+
+#root{
+    -fx-background-color: rgb(39, 38, 38);
+}
+
+#welcomLayout{
+    -fx-font-family: Montserrat;
+    -fx-font-size: 38px;
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}
+
+#close, #reduce{
+    -fx-background-color: transparent;
+    -fx-padding: 8px 12px;
+    -fx-text-fill: white;
+    -fx-font-family: Montserrat;
+    -fx-font-size: 18;
+    -fx-background-radius: 16px;
+}
+
+#displayHide:hover{
+    -fx-background-color: rgb(39, 38, 38);
+    -fx-cursor: hand;
+}
+
+#close:hover{
+    -fx-background-color: rgb(39, 38, 38);
+    -fx-cursor: hand;
+}
+
+#numCompte{
+    -fx-font-family: Montserrat;
+    -fx-font-size: 20px;
+    -fx-background-radius: 16px;
+}
+
+#numCompte::placeholder{
+    -fx-font-family: Montserrat;
+    -fx-font-size: 20px;
+}
+
+#btn{
+    -fx-font-family: Montserrat;
+    -fx-background-color: red;
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 16px;
+}
