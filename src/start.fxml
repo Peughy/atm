@@ -41,7 +41,11 @@
       </Label>
       <Label fx:id="welcomLayout" layoutX="34.0" layoutY="153.0" text="Bienvenu sur ATM." />
       <TextField fx:id="numCompte" layoutX="34.0" layoutY="297.0" prefHeight="47.0" prefWidth="544.0" promptText="Entrez votre numero de compte" />
-      <Button fx:id="btn" layoutX="37.0" layoutY="375.0" mnemonicParsing="false" onAction="#getApp" prefHeight="47.0" prefWidth="544.0" text="Valider" />
+      <Button fx:id="btn" layoutX="37.0" layoutY="375.0" mnemonicParsing="false" onAction="#getApp" prefHeight="47.0" prefWidth="544.0" text="Valider">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
       <Label layoutX="34.0" layoutY="200.0" text="Votre guichet automatique numerique" textFill="WHITE">
          <font>
             <Font name="Montserrat Regular" size="25.0" />

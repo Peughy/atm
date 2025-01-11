@@ -21,6 +21,17 @@
     -fx-font-size: 20px;
 }
 
+#montant{
+    -fx-font-family: Montserrat;
+    -fx-font-size: 20px;
+    -fx-background-radius: 16px;
+}
+
+#montant::placeholder{
+    -fx-font-family: Montserrat;
+    -fx-font-size: 20px;
+}
+
 #mdp{
     -fx-font-family: Montserrat;
     -fx-font-size: 20px;
@@ -50,7 +61,7 @@
     -fx-background-radius: 16px;
 }
 
-#close, #reduce{
+#close, #reduce, #home{
     -fx-background-color: transparent;
     -fx-padding: 8px 12px;
     -fx-text-fill: white;
@@ -59,18 +70,8 @@
     -fx-background-radius: 16px;
 }
 
-#displayHide:hover{
-    -fx-background-color: rgb(39, 38, 38);
-    -fx-cursor: hand;
-}
-
-#close:hover{
-    -fx-background-color: rgb(39, 38, 38);
-    -fx-cursor: hand;
-}
-
-#reduce:hover{
-    -fx-background-color: rgb(39, 38, 38);
+#close:hover, #reduce:hover, #home:hover{
+    -fx-background-color: rgba(255, 255, 255, .2);
     -fx-cursor: hand;
 }
 

@@ -9,7 +9,7 @@
     -fx-font-weight: bold;
 }
 
-#close, #reduce{
+#close, #reduce, #home, #download{
     -fx-background-color: transparent;
     -fx-padding: 8px 12px;
     -fx-text-fill: white;
@@ -18,13 +18,17 @@
     -fx-background-radius: 16px;
 }
 
-#displayHide:hover{
-    -fx-background-color: rgb(39, 38, 38);
+#reduce:hover, #home:hover, #close:hover, #download:hover{
+    -fx-background-color: rgba(255, 255, 255, .2);
     -fx-cursor: hand;
 }
 
-#close:hover{
-    -fx-background-color: rgb(39, 38, 38);
-    -fx-cursor: hand;
+#histView{
+    -fx-font-size: 18px;
+    -fx-font-family: Montserrat;
 }
 
+.list-cell:filled:selected, .list-cell:filled:selected:hover{
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}

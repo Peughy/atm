@@ -43,12 +43,12 @@
 }
 
 #close:hover{
-    -fx-background-color: rgb(39, 38, 38);
+    -fx-background-color: rgba(255, 255, 255, .3);
     -fx-cursor: hand;
 }
 
 #reduce:hover{
-    -fx-background-color: rgb(39, 38, 38);
+    -fx-background-color: rgba(255, 255, 255, .3);
     -fx-cursor: hand;
 }
 

@@ -10,10 +10,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@historique.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HistoriqueController">
    <children>
-      <ListView layoutX="34.0" layoutY="167.0" prefHeight="619.0" prefWidth="533.0" />
+      <ListView fx:id="histView" layoutX="34.0" layoutY="167.0" prefHeight="619.0" prefWidth="533.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ListView>
       <Label fx:id="welcomLayout" layoutX="34.0" layoutY="100.0" text="Mon historique" />
       <Button fx:id="close" layoutX="536.0" layoutY="25.0" mnemonicParsing="false" onAction="#close">
          <graphic>
@@ -41,5 +43,21 @@
             <Font name="Montserrat Regular" size="22.0" />
          </font>
       </Label>
+      <Button fx:id="home" layoutX="370.0" layoutY="25.0" mnemonicParsing="false" onAction="#home">
+         <graphic>
+            <FontAwesomeIcon fill="RED" glyphName="HOME" size="1.5em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="download" layoutX="426.0" layoutY="25.0" mnemonicParsing="false" onAction="#home">
+         <graphic>
+            <FontAwesomeIcon fill="RED" glyphName="DOWNLOAD" size="1.5em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

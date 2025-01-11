@@ -62,7 +62,6 @@ public class StartController {
 
                     // recuperation des valeur 
                     String numCompte = resultSet.getString("num");
-                    double montant =  resultSet.getDouble("amount");
                     
                     try {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("main.fxml"));
@@ -86,7 +85,7 @@ public class StartController {
 
                         // envoi des donnees
                         MainController mainController = loader.getController();
-                        mainController.init(numCompte, montant);
+                        mainController.init(numCompte);
 
                         stage.setScene(scene);
                         stage.show();

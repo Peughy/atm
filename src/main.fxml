@@ -31,7 +31,7 @@
          </children>
       </AnchorPane>
       <Label fx:id="welcomLayout" layoutX="35.0" layoutY="77.0" prefHeight="29.0" prefWidth="530.0" stylesheets="@main.css" text="Bienvenue, 229 330 473" />
-      <Label fx:id="question" alignment="CENTER" layoutX="63.0" layoutY="454.0" prefHeight="39.0" prefWidth="490.0" text="Vos activites" />
+      <Label fx:id="question" alignment="CENTER" layoutX="63.0" layoutY="454.0" prefHeight="39.0" prefWidth="490.0" text="Que ferez nous aujourd'hui ?" />
       <Button fx:id="retrait" layoutX="63.0" layoutY="550.0" mnemonicParsing="false" onAction="#faireRetrait" prefHeight="91.0" prefWidth="213.0" style="-fx-border-radius: 16;" text="Retrait">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="MONEY" size="1.2em" />
@@ -39,14 +39,14 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button fx:id="infos" layoutX="338.0" layoutY="550.0" mnemonicParsing="false" onAction="#consulterHistorique" prefHeight="91.0" prefWidth="213.0" style="-fx-border-radius: 16;" text="Mes infos">
+      <Button fx:id="infos" layoutX="338.0" layoutY="550.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="213.0" style="-fx-border-radius: 16;" text="Mes infos">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="INFO_CIRCLE" size="1.2em" />
          </graphic>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button fx:id="history" layoutX="63.0" layoutY="681.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="213.0" style="-fx-border-radius: 16;" text="Historiques">
+      <Button fx:id="history" layoutX="63.0" layoutY="681.0" mnemonicParsing="false" onAction="#consulterHistorique" prefHeight="91.0" prefWidth="213.0" style="-fx-border-radius: 16;" text="Historiques">
          <graphic>
             <FontAwesomeIcon fill="WHITE" glyphName="HISTORY" size="1.2em" />
          </graphic>

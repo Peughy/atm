@@ -1,5 +1,9 @@
 // import javafx.event.ActionEvent;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.NumberFormat;
 import java.util.Locale;
 
@@ -45,9 +49,26 @@ public class MainController {
     }
 
     // recupere les valeurs
-    public void init(String num, double amount){
+    public void init(String num){
         this.numero = num;
-        this.solde = amount;
+
+        // connexion a la bd
+        ConnexionDatabase connexionDatabase = new ConnexionDatabase();
+
+        Connection connection = connexionDatabase.connexiondb(); 
+        PreparedStatement ps;
+        try {
+            ps = connection.prepareStatement("SELECT amount FROM compte WHERE num = ?");
+            ps.setString(1, this.numero);
+            // valider la requete
+            ResultSet resultSet = ps.executeQuery();
+            if(resultSet.next()){
+                this.solde = resultSet.getDouble("amount");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+
 
         welcomLayout.setText("Bienvenu, " + this.numero);
         this.amount.setText("********");
@@ -56,7 +77,8 @@ public class MainController {
     // change scene to retrait scene
     public void faireRetrait(ActionEvent event){
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("retrait.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("retrait.fxml"));
+            Parent parent = loader.load();
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             
@@ -73,6 +95,10 @@ public class MainController {
                 stage.setX(e.getScreenX() - xOffset);
                 stage.setY(e.getScreenY() - yOffset);
             });
+
+            // passage des informations
+            RetraitController retraitController = loader.getController();
+            retraitController.init(this.numero);
 
             stage.setScene(scene);
             stage.show();
@@ -85,7 +111,8 @@ public class MainController {
 // change scene to historique scene
     public void consulterHistorique(ActionEvent event){
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("historique.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("historique.fxml"));
+            Parent parent = loader.load();
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             
@@ -102,6 +129,11 @@ public class MainController {
                 stage.setX(e.getScreenX() - xOffset);
                 stage.setY(e.getScreenY() - yOffset);
             });
+
+
+            // passage du numero
+            HistoriqueController historiqueController = loader.getController();
+            historiqueController.init(this.numero);
 
             stage.setScene(scene);
             stage.show();
