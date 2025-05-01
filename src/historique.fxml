@@ -51,7 +51,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="download" layoutX="426.0" layoutY="25.0" mnemonicParsing="false" onAction="#home">
+      <Button fx:id="download" layoutX="426.0" layoutY="25.0" mnemonicParsing="false" onAction="#download">
          <graphic>
             <FontAwesomeIcon fill="RED" glyphName="DOWNLOAD" size="1.5em" />
          </graphic>

@@ -4,14 +4,14 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" stylesheets="@start.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StartController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="600.0" stylesheets="@start.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StartController">
    <children>
       <Button fx:id="reduce" layoutX="492.0" layoutY="17.0" mnemonicParsing="false" onAction="#reduce">
          <graphic>
@@ -41,7 +41,7 @@
       </Label>
       <Label fx:id="welcomLayout" layoutX="34.0" layoutY="153.0" text="Bienvenu sur ATM." />
       <TextField fx:id="numCompte" layoutX="34.0" layoutY="297.0" prefHeight="47.0" prefWidth="544.0" promptText="Entrez votre numero de compte" />
-      <Button fx:id="btn" layoutX="37.0" layoutY="375.0" mnemonicParsing="false" onAction="#getApp" prefHeight="47.0" prefWidth="544.0" text="Valider">
+      <Button fx:id="btn" layoutX="37.0" layoutY="469.0" mnemonicParsing="false" onAction="#getApp" prefHeight="47.0" prefWidth="544.0" text="Valider">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -51,5 +51,6 @@
             <Font name="Montserrat Regular" size="25.0" />
          </font>
       </Label>
+      <PasswordField fx:id="mdp" layoutX="34.0" layoutY="383.0" prefHeight="47.0" prefWidth="544.0" promptText="Entrez votre mot de passe" />
    </children>
 </AnchorPane>

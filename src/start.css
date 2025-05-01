@@ -29,13 +29,13 @@
     -fx-cursor: hand;
 }
 
-#numCompte{
+#numCompte, #mdp{
     -fx-font-family: Montserrat;
     -fx-font-size: 20px;
     -fx-background-radius: 16px;
 }
 
-#numCompte::placeholder{
+#numCompte::placeholder, #mdp::placeholder{
     -fx-font-family: Montserrat;
     -fx-font-size: 20px;
 }
@@ -47,4 +47,9 @@
     -fx-text-fill: white;
     -fx-font-weight: bold;
     -fx-background-radius: 16px;
+}
+
+#close:hover, #reduce:hover{
+    -fx-background-color: rgba(255, 255, 255, .2);
+    -fx-cursor: hand;
 }

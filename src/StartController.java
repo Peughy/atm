@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -26,6 +27,9 @@ public class StartController {
 
     @FXML
     private TextField numCompte;
+
+    @FXML
+    private PasswordField mdp;
 
     // methode pour fermer la fenetre
     public void close(){
@@ -43,18 +47,20 @@ public class StartController {
     // recuperation des informations 
     public void getApp(ActionEvent event){
         String numCompteText = numCompte.getText();
+        String mdpText = mdp.getText();
 
-        if(!numCompteText.isEmpty()){
+        if(!numCompteText.isEmpty() && !mdpText.isEmpty()){
             ConnexionDatabase connexionDatabase = new ConnexionDatabase();
             try {
                 // recuperation de la connexion
                 Connection connection = connexionDatabase.connexiondb();
 
                 // ecriture de la requette
-                PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM compte WHERE NUM = ?");
+                PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM compte WHERE num = ? AND mdp = ? ");
 
                 // passage des parametres
                 preparedStatement.setString(1, numCompteText);
+                preparedStatement.setString(2, mdpText);
 
                 // execution
                 ResultSet resultSet = preparedStatement.executeQuery();

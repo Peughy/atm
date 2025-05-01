@@ -108,7 +108,7 @@ public class MainController {
     }
 
 
-// change scene to historique scene
+    // change scene to historique scene
     public void consulterHistorique(ActionEvent event){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("historique.fxml"));
@@ -134,6 +134,35 @@ public class MainController {
             // passage du numero
             HistoriqueController historiqueController = loader.getController();
             historiqueController.init(this.numero);
+
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Nous avons recontres une erreur!");
+        }
+    }
+
+    // change scene to historique scene
+    public void deconnexion(ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("start.fxml"));
+            Parent parent = loader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            Scene scene = new Scene(parent);
+
+            // capture de l'etat de la souris
+            parent.setOnMousePressed(e -> {
+                xOffset = e.getSceneX();
+                yOffset = e.getSceneY();
+            });
+
+            // detection de la position du cursor lorsque ca se depasse
+            parent.setOnMouseDragged(e -> {
+                stage.setX(e.getScreenX() - xOffset);
+                stage.setY(e.getScreenY() - yOffset);
+            });
 
             stage.setScene(scene);
             stage.show();

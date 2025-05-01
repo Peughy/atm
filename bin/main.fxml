@@ -53,7 +53,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button fx:id="reduce" layoutX="493.0" layoutY="7.0" mnemonicParsing="false" onAction="#reduce">
+      <Button fx:id="reduce" layoutX="491.0" layoutY="8.0" mnemonicParsing="false" onAction="#reduce">
          <graphic>
             <FontAwesomeIcon fill="RED" glyphName="MINUS" selectionFill="RED" size="1.3em" />
          </graphic>
@@ -79,5 +79,13 @@
             <Font name="Montserrat Regular" size="22.0" />
          </font>
       </Label>
+      <Button fx:id="logout" layoutX="445.0" layoutY="8.0" mnemonicParsing="false" onAction="#deconnexion">
+         <graphic>
+            <FontAwesomeIcon fill="RED" glyphName="SIGN_OUT" selectionFill="RED" size="1.3em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

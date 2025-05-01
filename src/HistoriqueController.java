@@ -1,7 +1,10 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -15,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class HistoriqueController {
@@ -108,6 +112,49 @@ public class HistoriqueController {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
+    }
+
+    // pour telecharger l'historique
+    public void download(){
+
+        // recuperation du stage
+        Stage primaryStage = (Stage) root.getScene().getWindow();
+
+        // lasse permettant d'ouvrir l'explorateur de fichier
+         FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Enregistrer mon historique");
+
+            // permet de filtrer les extension
+            fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("Fichiers texte", "*.txt")
+            );
+
+            // Montrer la fenêtre pour choisir le fichier
+            File file = fileChooser.showSaveDialog(primaryStage);
+
+            if (file != null) {
+                // Écrire les items dans le fichier
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+                    writer.write("Historique du compte " + this.numero);
+                        writer.newLine();
+                        LocalDateTime date_now = LocalDateTime.now();
+                        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy 'a' HH:mm");
+                        writer.write("Date de telechargement " + date_now.format(formatter));
+                        writer.newLine();
+                        writer.write("--------------------------------------------------");
+                        writer.newLine();
+                        writer.newLine();
+                        writer.newLine();
+                    for (String item : histView.getItems()) {
+                        writer.write(item);
+                        writer.newLine();
+                        writer.newLine();
+                    }
+                    JOptionPane.showMessageDialog(null, "Fichier enregistré avec succès");
+                } catch (IOException e) {
+                    JOptionPane.showMessageDialog(null, e.getMessage());
+                }
+            }
     }
     
 }
